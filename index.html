@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GOLD LIGHT | متجر الإضاءة الفاخرة - Vintage Filament Collection</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="GOLD LIGHT - ONLINE-BASED LUXURY LIGHTING BRAND. تشكيلة حصرية من أرقى مصابيح إديسون الديكورية بفتيل LED الذهبي 2200K. تواصل عبر واتساب: 01034380360">
+  <meta name="keywords" content="GOLD LIGHT, مصابيح اديسون, لمبات ديكور, إضاءة كلاسيكية, luxury lighting, 01034380360">
+  <meta property="og:title" content="GOLD LIGHT | ONLINE-BASED LUXURY LIGHTING BRAND">
+  <meta property="og:description" content="تشكيلة حصرية من أرقى مصابيح إديسون الديكورية. تواصل عبر واتساب: 01034380360">
+  <meta property="og:image" content="logo.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Cairo & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Browser Tab Favicon (Official Gold Light Logo) -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.png">
+</head>
+<body>
+
+  <!-- Dynamic Ambient Glow Backdrop -->
+  <div class="ambient-glow" id="ambientGlow"></div>
+  <canvas id="particlesCanvas" class="particles-canvas"></canvas>
+
+  <!-- ========================================================
+       CINEMATIC SCROLL STORY HOOK (3-STEP VISUAL JOURNEY)
+       ======================================================== -->
+    <!-- ========================================================
+       CINEMATIC 4-ACT STORY: THE BIRTH OF LIGHT (GOLD LIGHT)
+       Act 1: Hand-Blown Empty Glass Shell
+       Act 2: Golden Filament Cage Insertion
+       Act 3: Electrical Spark & 2200K Ignition
+       Act 4: Radiant Photon Explosion & Room Illumination
+       ======================================================== -->
+          <section class="story-hook-section" id="storyHookSection">
+    
+    <!-- Sticky Full-Screen Cinematic Stage (100vw x 100vh) -->
+    <div class="story-sticky-stage" id="storyStickyStage">
+      
+      <!-- Luxury Architectural Viewport (100vw x 100vh) -->
+      <div class="penthouse-viewport" id="penthouseViewport">
+        
+        <!-- BASE LAYER: The Dark Midnight Penthouse (Unlit Lamps Physically Installed) -->
+        <div class="penthouse-layer layer-dark" id="penthouseDarkLayer">
+          <img src="penthouse_dark.jpg" alt="Dark Penthouse Villa" class="penthouse-scene-img">
+        </div>
+
+        <!-- ZONE 1: American Kitchen Island Illumination Layer -->
+        <div class="penthouse-layer zone-lit zone-kitchen" id="zoneKitchen">
+          <img src="penthouse_lit.jpg" alt="Lit Kitchen Island" class="penthouse-scene-img">
+        </div>
+
+        <!-- ZONE 2: TV & Media Console Illumination Layer -->
+        <div class="penthouse-layer zone-lit zone-tv" id="zoneTv">
+          <img src="penthouse_lit.jpg" alt="Lit TV Media Unit" class="penthouse-scene-img">
+        </div>
+
+        <!-- ZONE 3: Grand Living Salon Illumination Layer -->
+        <div class="penthouse-layer zone-lit zone-salon" id="zoneSalon">
+          <img src="penthouse_lit.jpg" alt="Lit Grand Salon" class="penthouse-scene-img">
+        </div>
+
+        <!-- FULL ILLUMINATION LAYER: The Entire Penthouse Flooded with 2200K Warmth -->
+        <div class="penthouse-layer layer-full-lit" id="penthouseFullLitLayer">
+          <img src="penthouse_lit.jpg" alt="Fully Lit Luxury Penthouse" class="penthouse-scene-img">
+        </div>
+
+        <!-- Volumetric Ambient Light Flares & Warmth Bloom -->
+        <div class="room-warm-bloom" id="roomWarmBloom"></div>
+
+        <!-- Real-Time Interactive Particle Canvas (Golden Sparks & Dust across 100vw) -->
+        <canvas id="cinematicStoryCanvas" class="cinematic-canvas"></canvas>
+
+      </div>
+
+      <!-- Minimal Bottom Scroll Prompt (Disappears immediately on scroll) -->
+      <div class="story-scroll-hint" id="storyScrollHint">
+        <div class="scroll-mouse-icon">
+          <div class="scroll-wheel-dot"></div>
+        </div>
+        <span class="scroll-hint-label">مرّر للأسفل لإضاءة أركان القصر بمصابيح GOLD LIGHT ↓</span>
+      </div>
+
+      <!-- Minimal Milestone Dots on Edge (Non-intrusive 4 luxury dots) -->
+      <div class="cinema-minimal-dots" id="cinemaMinimalDots">
+        <span class="m-dot active" data-step="1"></span>
+        <span class="m-dot" data-step="2"></span>
+        <span class="m-dot" data-step="3"></span>
+        <span class="m-dot" data-step="4"></span>
+      </div>
+
+      <!-- Climax Explore CTA Button (Appears only upon 100% full illumination) -->
+      <div class="story-explore-wrap" id="storyExploreWrap">
+        <button class="story-explore-btn" id="storyExploreBtn">
+          <span>استكشف المجموعة الكاملة الآن</span>
+          <i class="fa-solid fa-arrow-down"></i>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ==================== MAIN SITE CONTAINER ==================== -->
+  <div class="main-site-wrapper" id="mainSiteWrapper">
+
+    <!-- ==================== HEADER ==================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header-container">
+        
+        <!-- Brand Logo -->
+        <a href="#hero" class="brand-logo" aria-label="GOLD LIGHT Home">
+          <img src="logo-transparent.png" alt="GOLD LIGHT Logo" class="brand-logo-img">
+          <div class="brand-text">
+            <span class="brand-name">GOLD<span class="gold-accent"> LIGHT</span></span>
+            <span class="brand-sub">ONLINE-BASED LUXURY LIGHTING BRAND</span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="main-nav" id="mainNav">
+          <ul class="nav-list">
+            <li><a href="#hero" class="nav-link active">الرئيسية</a></li>
+            <li><a href="#showcase" class="nav-link">المجموعة (7 تصاميم) <span class="nav-badge">حصري</span></a></li>
+            <li><a href="#features" class="nav-link">معايير الجودة</a></li>
+            <li><a href="#contact" class="nav-link">طلب واتساب</a></li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Light Glow Dimmer Quick Toggle -->
+          <button class="theme-dimmer-btn" id="quickDimmerBtn" title="تبديل توهج الإضاءة" aria-label="Toggle Glow">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span class="dimmer-status">توهج ذهبي</span>
+          </button>
+
+          <!-- Direct WhatsApp CTA with User's Number -->
+          <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9%20%D9%85%D8%B5%D8%A7%D8%A8%D9%8A%D8%AD%20%D8%A5%D8%AF%D9%8A%D8%B3%D9%88%D9%86%20%D8%A7%D9%84%D9%81%D8%A7%D8%AE%D8%B1%D8%A9%20AURA%20LUXE." target="_blank" class="btn-header-wa" id="headerWaBtn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>01034380360</span>
+          </a>
+
+          <!-- Mobile Menu Toggle -->
+          <button class="mobile-toggle" id="mobileToggle" aria-label="قائمة الموبايل">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <ul class="mobile-nav-list">
+          <li><a href="#hero" class="mobile-link">الرئيسية</a></li>
+          <li><a href="#showcase" class="mobile-link">المجموعة الحصرية (7 تصاميم)</a></li>
+          <li><a href="#features" class="mobile-link">لماذا تختار مصابيحنا</a></li>
+          <li><a href="#contact" class="mobile-link">تواصل معنا عبر واتساب</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+          <a href="https://wa.me/201034380360" target="_blank" class="btn-primary-wa mobile-wa-btn" id="mobileMenuWaBtn">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>محادثة فورية (01034380360)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="hero-section" id="hero">
+        <div class="container hero-container">
+          
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot"></span>
+              <span>مجموعة الفتيل الكلاسيكي LED لعام 2026</span>
+            </div>
+            
+            <h1 class="hero-title">
+              فن الإضاءة المعمارية <br>
+              <span class="text-gradient">بتجسيم ودوران ثلاثي الأبعاد</span>
+            </h1>
+            
+            <p class="hero-description">
+              استكشف تشكيلة <strong>GOLD LIGHT</strong> الحصرية المكونة من 7 مصابيح فتيل كلاسيكية فائقة النقاء. حرك الماوس أو المس المصباح لتدويره في فضاء 3D واختبر تفاصيل خيوط الفتيل المعتقة.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#showcase" class="btn-hero-primary">
+                <span>تصفح الـ 7 تصاميم الفاخرة</span>
+                <i class="fa-solid fa-arrow-down"></i>
+              </a>
+
+              <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%A8%D8%A7%D9%82%D8%A9%20%D8%A7%D9%84%D9%80%207%20%D9%85%D8%B5%D8%A7%D8%A8%D9%8A%D8%AD%20%D9%83%D8%A7%D9%85%D9%84%D8%A9." target="_blank" class="btn-hero-secondary" id="heroWaDirect">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>طلب التشكيلة كاملة (واتساب)</span>
+              </a>
+            </div>
+
+            <!-- Trust Stats Under Hero -->
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number">2200K</span>
+                <span class="stat-label">توهج كهرماني فائق الدفء</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">25,000h</span>
+                <span class="stat-label">عمر افتراضي طويل الأمد</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number">01034380360</span>
+                <span class="stat-label">خدمة عملاء وتوصيل فوري</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual: 3D Rotating Bulb Showcase (Bulb Rotates, Not the Card) -->
+          <div class="hero-visual-stage">
+            <div class="stage-chassis">
+              
+              <div class="stage-light-glow"></div>
+              
+              <div class="bulb-spin-stage" id="heroBulbStage">
+                <!-- 3D Suspended Bulb -->
+                <div class="lamp-object-3d" id="heroLampObject">
+                  <div class="lamp-stem"></div>
+                  <img src="WhatsApp Image 2026-11-01 at 3.25.45 PM (3).jpeg" alt="AURA G125 Grand Globe Edison Bulb" class="hero-spinning-bulb" id="heroSpinningBulb">
+                  <div class="lamp-specular-sheen" id="heroLampSheen"></div>
+                </div>
+
+                <!-- 3D Pedestal Base -->
+                <div class="interactive-pedestal">
+                  <div class="pedestal-disc"></div>
+                  <div class="pedestal-radial-shadow"></div>
+                </div>
+              </div>
+
+              <!-- Stage Bottom Control / Badge -->
+              <div class="stage-info-bar">
+                <div class="stage-info-text">
+                  <span class="stage-title">Aura Grand Globe G125</span>
+                  <span class="stage-sub">حرك الماوس أو المس لتدوير المصباح 360°</span>
+                </div>
+                <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Aura%20Grand%20Globe%20G125%20(G125-MAX)." target="_blank" class="stage-wa-btn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <span>طلب مباشر</span>
+                </a>
+              </div>
+
+              <div class="stage-badge-3d">
+                <i class="fa-solid fa-arrows-spin fa-spin"></i>
+                <span>تفاعل 3D مباشر على المصباح</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== PRODUCTS SHOWCASE (REFINED LUXURY 3D BULB CARDS) ==================== -->
+      <section class="showcase-section" id="showcase">
+        <div class="container">
+          
+          <div class="section-header">
+            <div class="section-header-top">
+              <div>
+                <div class="sub-heading">تشكيلة النخبة الحصرية</div>
+                <h2 class="section-title">المجموعة الملكية <span class="gold-accent">(7 تحف معمارية)</span></h2>
+                <p class="section-desc">تصاميم استثنائية تم تصنيعها بعناية فائقة لتمنح مساحتك دفئاً راقياً وإضاءة كلاسيكية تدوم لسنوات.</p>
+              </div>
+              
+              <!-- Filter Pills -->
+              <div class="filter-pills" id="filterPills">
+                <button class="filter-btn active" data-filter="all">جميع المصابيح (7)</button>
+                <button class="filter-btn" data-filter="globes">الكروية والكمثرية</button>
+                <button class="filter-btn" data-filter="candles">الشموع والنجف</button>
+                <button class="filter-btn" data-filter="tubular">الأنبوبية والأسطوانية</button>
+              </div>
+            </div>
+          </div>
+
+                    <!-- World-Class International E-Commerce Product Grid (Clean, Zero 3D Gimmicks) -->
+          <div class="pro-products-grid" id="productsGrid">
+
+            <!-- PRODUCT 1 -->
+            <article class="pro-card" data-category="globes" data-id="1">
+              <div class="pro-image-container">
+                <span class="pro-badge gold">الأكثر طلباً</span>
+                <img src="Screenshot 2026-11-01 185356.png" alt="Gold Light Classic Pear A60" class="pro-img" loading="lazy">
+              </div>
+
+              <div class="pro-card-details">
+                <div class="pro-header-row">
+                  <span class="pro-model">MODEL: A60-V</span>
+                  <span class="pro-base-tag">E27</span>
+                </div>
+
+                <h3 class="pro-name">Gold Light Classic Pear A60</h3>
+                <p class="pro-summary">المصباح الكمثري الكلاسيكي بزجاج كهرماني نقي، يمنح دفئاً راقياً للأركان وطاولات العشاء.</p>
+
+                <div class="pro-specs-line">
+                  <span><i class="fa-solid fa-bolt"></i> 4W LED</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-sun"></i> 2200K دافئ</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-clock"></i> 25,000h</span>
+                </div>
+
+                <div class="pro-action-row">
+                  <div class="pro-price-wrap">
+                    <span class="pro-price-tag">سعر خاص للطلب</span>
+                  </div>
+
+                  <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Gold%20Light%20Classic%20Pear%20A60%20(A60-V)." target="_blank" class="btn-wa-compact">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>طلب واتساب</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 2 -->
+            <article class="pro-card" data-category="globes" data-id="2">
+              <div class="pro-image-container">
+                <span class="pro-badge signature">الأيقونة الكلاسيكية</span>
+                <img src="WhatsApp Image 2026-11-01 at 3.25.45 PM.jpeg" alt="Gold Light ST64 Squirrel Cage" class="pro-img" loading="lazy">
+              </div>
+
+              <div class="pro-card-details">
+                <div class="pro-header-row">
+                  <span class="pro-model">MODEL: ST64-PRO</span>
+                  <span class="pro-base-tag">E27</span>
+                </div>
+
+                <h3 class="pro-name">Gold Light ST64 Squirrel Cage</h3>
+                <p class="pro-summary">شكل قطرة الدمعة التراثي مع خيوط فتيل عمودية متوازية للمصابيح المعلقة والثرية المفتوحة.</p>
+
+                <div class="pro-specs-line">
+                  <span><i class="fa-solid fa-bolt"></i> 6W LED</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-sun"></i> 2200K دافئ</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-clock"></i> 25,000h</span>
+                </div>
+
+                <div class="pro-action-row">
+                  <div class="pro-price-wrap">
+                    <span class="pro-price-tag">سعر خاص للطلب</span>
+                  </div>
+
+                  <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Gold%20Light%20ST64%20Squirrel%20Cage%20(ST64-PRO)." target="_blank" class="btn-wa-compact">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>طلب واتساب</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 3 -->
+            <article class="pro-card" data-category="candles" data-id="3">
+              <div class="pro-image-container">
+                <span class="pro-badge luxury">شعلة الشمعدان</span>
+                <img src="WhatsApp Image 2026-11-01 at 3.25.45 PM (1).jpeg" alt="Gold Light C35T Flame-Tip" class="pro-img" loading="lazy">
+              </div>
+
+              <div class="pro-card-details">
+                <div class="pro-header-row">
+                  <span class="pro-model">MODEL: C35T-FLAME</span>
+                  <span class="pro-base-tag">E14/E27</span>
+                </div>
+
+                <h3 class="pro-name">Gold Light C35T Flame-Tip</h3>
+                <p class="pro-summary">رأس منحنٍ كشعلة الشمعة الراقصة مع قاعدة نحاسية فاخرة، مثالي للنجف والشمعدانات الجدارية.</p>
+
+                <div class="pro-specs-line">
+                  <span><i class="fa-solid fa-bolt"></i> 4W LED</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-sun"></i> 2200K شمعي</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-clock"></i> 25,000h</span>
+                </div>
+
+                <div class="pro-action-row">
+                  <div class="pro-price-wrap">
+                    <span class="pro-price-tag">سعر خاص للطلب</span>
+                  </div>
+
+                  <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Gold%20Light%20C35T%20Flame-Tip%20(C35T-FLAME)." target="_blank" class="btn-wa-compact">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>طلب واتساب</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 4 -->
+            <article class="pro-card" data-category="candles" data-id="4">
+              <div class="pro-image-container">
+                <span class="pro-badge modern">طوربيد كلاسيك</span>
+                <img src="WhatsApp Image 2026-11-01 at 3.25.45 PM (2).jpeg" alt="Gold Light C35 Torpedo Candle" class="pro-img" loading="lazy">
+              </div>
+
+              <div class="pro-card-details">
+                <div class="pro-header-row">
+                  <span class="pro-model">MODEL: C35-TORPEDO</span>
+                  <span class="pro-base-tag">E27/E14</span>
+                </div>
+
+                <h3 class="pro-name">Gold Light C35 Torpedo Candle</h3>
+                <p class="pro-summary">تصميم مدبب انسيابي يعكس الضوء بزاوية 360 درجة للأبجورات ووحدات الإضاءة الرخامية والمعدنية.</p>
+
+                <div class="pro-specs-line">
+                  <span><i class="fa-solid fa-bolt"></i> 4W LED</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-sun"></i> 2200K دافئ</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-clock"></i> 25,000h</span>
+                </div>
+
+                <div class="pro-action-row">
+                  <div class="pro-price-wrap">
+                    <span class="pro-price-tag">سعر خاص للطلب</span>
+                  </div>
+
+                  <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Gold%20Light%20C35%20Torpedo%20(C35-TORPEDO)." target="_blank" class="btn-wa-compact">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>طلب واتساب</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 5 -->
+            <article class="pro-card" data-category="globes" data-id="5">
+              <div class="pro-image-container">
+                <span class="pro-badge royal">القطعة الملكية العملاقة</span>
+                <img src="WhatsApp Image 2026-11-01 at 3.25.45 PM (3).jpeg" alt="Gold Light Grand Sphere Globe G125" class="pro-img" loading="lazy">
+              </div>
+
+              <div class="pro-card-details">
+                <div class="pro-header-row">
+                  <span class="pro-model">MODEL: G125-MAX</span>
+                  <span class="pro-base-tag">E27</span>
+                </div>
+
+                <h3 class="pro-name">Gold Light Grand Sphere Globe G125</h3>
+                <p class="pro-summary">كرة زجاجية ضخمة بقطر 125 مم تمثل مركز الجذب، بفتيل لولبي يخطف الأنظار فور إضاءته.</p>
+
+                <div class="pro-specs-line">
+                  <span><i class="fa-solid fa-bolt"></i> 8W LED</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-sun"></i> 2200K كهرماني</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-clock"></i> 25,000h</span>
+                </div>
+
+                <div class="pro-action-row">
+                  <div class="pro-price-wrap">
+                    <span class="pro-price-tag">سعر خاص للطلب</span>
+                  </div>
+
+                  <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Gold%20Light%20Globe%20G125%20(G125-MAX)." target="_blank" class="btn-wa-compact">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>طلب واتساب</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 6 -->
+            <article class="pro-card" data-category="tubular" data-id="6">
+              <div class="pro-image-container">
+                <span class="pro-badge modern">معماري كبسولي</span>
+                <img src="WhatsApp Image 2026-11-01 at 3.25.45 PM (4).jpeg" alt="Gold Light T45 Architectural Capsule" class="pro-img" loading="lazy">
+              </div>
+
+              <div class="pro-card-details">
+                <div class="pro-header-row">
+                  <span class="pro-model">MODEL: T45-CAPSULE</span>
+                  <span class="pro-base-tag">E27</span>
+                </div>
+
+                <h3 class="pro-name">Gold Light T45 Architectural Capsule</h3>
+                <p class="pro-summary">شكل أسطواني كبسولي عصري يندمج ببراعة مع التركيبات المعمارية النحيفة والمشغولات الخشبية.</p>
+
+                <div class="pro-specs-line">
+                  <span><i class="fa-solid fa-bolt"></i> 4W LED</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-sun"></i> 2200K دافئ</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-clock"></i> 25,000h</span>
+                </div>
+
+                <div class="pro-action-row">
+                  <div class="pro-price-wrap">
+                    <span class="pro-price-tag">سعر خاص للطلب</span>
+                  </div>
+
+                  <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Gold%20Light%20T45%20(T45-CAPSULE)." target="_blank" class="btn-wa-compact">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>طلب واتساب</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 7 -->
+            <article class="pro-card" data-category="tubular" data-id="7">
+              <div class="pro-image-container">
+                <span class="pro-badge royal">العمود الهندسي الفريد</span>
+                <img src="WhatsApp Image 2026-11-01 at 3.25.45 PM (6).jpeg" alt="Gold Light T300 Grand Tubular Column" class="pro-img" loading="lazy">
+              </div>
+
+              <div class="pro-card-details">
+                <div class="pro-header-row">
+                  <span class="pro-model">MODEL: T300-SPIRAL</span>
+                  <span class="pro-base-tag">E27</span>
+                </div>
+
+                <h3 class="pro-name">Gold Light T300 Grand Column</h3>
+                <p class="pro-summary">أنبوب إضاءة فائق الطول بخيوط فتيل هندسية متقاطعة (Zig-Zag) تصنع عموداً ضوئياً ساحراً.</p>
+
+                <div class="pro-specs-line">
+                  <span><i class="fa-solid fa-bolt"></i> 6W LED</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-sun"></i> 2200K كهرماني</span>
+                  <span class="dot-sep">•</span>
+                  <span><i class="fa-solid fa-clock"></i> 25,000h</span>
+                </div>
+
+                <div class="pro-action-row">
+                  <div class="pro-price-wrap">
+                    <span class="pro-price-tag">سعر خاص للطلب</span>
+                  </div>
+
+                  <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%86%D8%A7%20%D9%85%D9%87%D8%AA%D9%85%20%D8%A8%D8%B7%D9%84%D8%A8%20%D9%85%D8%B5%D8%A8%D8%A7%D8%AD%20Gold%20Light%20T300%20(T300-SPIRAL)." target="_blank" class="btn-wa-compact">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>طلب واتساب</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+          </div> <!-- /pro-products-grid -->
+
+        </div>
+      </section>
+
+      <!-- ==================== WHY CHOOSE US ==================== -->
+      <section class="features-section" id="features">
+        <div class="container">
+          
+          <div class="section-header text-center">
+            <div class="sub-heading">معايير الفخامة الحقيقية</div>
+            <h2 class="section-title">لماذا تختار مصابيح <span class="gold-accent">GOLD LIGHT</span>؟</h2>
+            <p class="section-desc">نجمع بين الحرفية اليدوية العريقة وأحدث تقنيات حفظ الطاقة لتوفير تجربة استثنائية تدوم لسنوات</p>
+          </div>
+
+          <div class="features-grid">
+            
+            <div class="feature-box">
+              <div class="feature-icon-wrap">
+                <i class="fa-solid fa-gem"></i>
+              </div>
+              <h3 class="feature-title">زجاج كهرماني يدوي فاخر</h3>
+              <p class="feature-desc">معالجة زجاجية كهرمانية ذهبية تمنع التوهج المزعج للعين وتوزع الإضاءة بطبقات مخملية دافئة تريح الحواس.</p>
+              <div class="feature-detail">Amber Tint Glass 2200K</div>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon-wrap">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <h3 class="feature-title">توفير 90% طاقة مع تقنية LED</h3>
+              <p class="feature-desc">استمتع بجمال لمبات التنجستن القديمة باستهلاك ضئيل جداً لا يتعدى 4 إلى 8 واط، دون أي حرارة منبعثة.</p>
+              <div class="feature-detail">Eco-Friendly Low Energy</div>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon-wrap">
+                <i class="fa-solid fa-shield-halved"></i>
+              </div>
+              <h3 class="feature-title">عمر افتراضي 25,000 ساعة</h3>
+              <p class="feature-desc">خيوط فتيل LED صلبة محكمة ضد الاهتزاز والكسر ومكونات داخلية عالية الاعتمادية تدوم لسنوات طويلة من العمل المستمر.</p>
+              <div class="feature-detail">Long-Life Durability</div>
+            </div>
+
+            <div class="feature-box">
+              <div class="feature-icon-wrap">
+                <i class="fa-solid fa-box-open"></i>
+              </div>
+              <h3 class="feature-title">تغليف فندقي آمن وشحن سريع</h3>
+              <p class="feature-desc">تغليف مقوى بطبقات حماية متعددة ضد الصدمات لضمان وصول كل مصباح سليم 100% مع ضمان فوري للاستبدال.</p>
+              <div class="feature-detail">Safe Delivery Across Egypt</div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==================== CALL TO ACTION ==================== -->
+      <section class="cta-section" id="contact">
+        <div class="container">
+          
+          <div class="cta-box-3d">
+            <div class="cta-sheen"></div>
+            
+            <div class="cta-content">
+              <div class="cta-badge">
+                <i class="fa-solid fa-bolt-lightning"></i>
+                <span>متاح التوصيل الفوري لجميع المحافظات</span>
+              </div>
+
+              <h2 class="cta-heading">
+                جاهز لتحويل أجواء مساحتك إلى <span class="gold-accent">فخامة عالمية</span>؟
+              </h2>
+              
+              <p class="cta-text">
+                تواصل مع مستشار الإضاءة الخاص بنا الآن على واتساب لاختيار المقاس الأنسب لمساحتك، الحصول على عروض الأسعار للكميات، أو الاستفسار عن تفاصيل التركيب.
+              </p>
+
+              <div class="cta-actions">
+                <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D8%AC%D9%85%D9%88%D8%B9%D8%A9%20%D9%85%D8%B5%D8%A7%D8%A8%D9%8A%D8%AD%20GOLD%20LIGHT." target="_blank" class="btn-cta-whatsapp" id="ctaWaBtn">
+                  <i class="fa-brands fa-whatsapp"></i>
+                  <div class="btn-cta-text">
+                    <span class="btn-main">تواصل معنا عبر واتساب الآن</span>
+                    <span class="btn-sub">رد فوري • 01034380360</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="cta-guarantees">
+                <div class="guarantee-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>ضمان استبدال فوري عند الاستلام</span>
+                </div>
+                <div class="guarantee-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>معاينة المنتج قبل الدفع</span>
+                </div>
+                <div class="guarantee-item">
+                  <i class="fa-solid fa-circle-check"></i>
+                  <span>خصم خاص على باقة الـ 7 تصاميم كاملة</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand-logo">
+              <img src="logo-transparent.png" alt="GOLD LIGHT" class="brand-logo-img">
+              <div class="brand-text">
+                <span class="brand-name">GOLD<span class="gold-accent"> LIGHT</span></span>
+                <span class="brand-sub">ONLINE-BASED LUXURY LIGHTING BRAND</span>
+              </div>
+            </div>
+            <p class="footer-about">
+              علامة رائدة متخصصة في توفير أرقى عناصر الإضاءة المعمارية والديكورية للمنازل الفاخرة والمشاريع الراقية.
+            </p>
+          </div>
+
+          <div class="footer-links-col">
+            <h4 class="footer-col-title">روابط سريعة</h4>
+            <ul class="footer-links">
+              <li><a href="#hero">الرئيسية</a></li>
+              <li><a href="#showcase">المجموعة (7 منتجات)</a></li>
+              <li><a href="#features">معايير الجودة</a></li>
+              <li><a href="#contact">الطلب والاستفسار</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact-col">
+            <h4 class="footer-col-title">الطلب المباشر</h4>
+            <p class="footer-contact-desc">تواصل معنا مباشرة عبر واتساب لطلب المنتجات والاستفسارات:</p>
+            <a href="https://wa.me/201034380360" target="_blank" class="footer-wa-link" id="footerWaBtn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>واتساب: 01034380360</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="copyright">جميع الحقوق محفوظة &copy; <span id="currentYear">2026</span> لـ <strong>GOLD LIGHT</strong>. ONLINE-BASED LUXURY LIGHTING BRAND.</p>
+          <div class="footer-badges">
+            <span><i class="fa-solid fa-lock"></i> تجربة تسوق آمنة</span>
+            <span><i class="fa-solid fa-truck-fast"></i> توصيل سريع</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div> <!-- /main-site-wrapper -->
+
+  <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+  <div class="floating-wa-wrap">
+    <div class="floating-wa-tooltip">
+      <span>تحدث مع خدمة العملاء (01034380360)</span>
+      <span class="online-indicator">متصل الآن</span>
+    </div>
+    <a href="https://wa.me/201034380360?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D9%88%D8%AF%20%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D9%81%D8%B3%D8%A7%D8%B1%20%D8%B9%D9%86%20%D9%85%D8%B5%D8%A7%D8%A8%D9%8A%D8%AD%20AURA%20LUXE." target="_blank" class="floating-wa-btn" id="floatingWaBtn" aria-label="WhatsApp Chat">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="floating-wa-ripple"></span>
+    </a>
+  </div>
+
+  <!-- ==================== 3D INTERACTIVE MODAL VIEWER ==================== -->
+  <div class="modal-3d-backdrop" id="modal3D" aria-hidden="true">
+    <div class="modal-3d-container">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="إغلاق المعاينة">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <div class="modal-3d-body">
+        
+        <!-- 3D Stage in Modal -->
+        <div class="modal-visual-col">
+          <div class="modal-stage-chamber">
+            <div class="modal-lamp-actor" id="modalLampActor">
+              <img src="" alt="Product View" id="modalBulbImg" class="modal-bulb-img">
+              <div class="modal-sheen" id="modalSheen"></div>
+            </div>
+            <div class="modal-tilt-hint">
+              <i class="fa-solid fa-arrows-spin"></i>
+              <span>حرّك الماوس / اسحب لتدوير المصباح 360°</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Info Col -->
+        <div class="modal-info-col">
+          <div class="modal-badge" id="modalBadge">تحفة معمارية</div>
+          <h2 class="modal-title" id="modalTitle">اسم المصباح</h2>
+          <div class="modal-model-code" id="modalModelCode">MODEL CODE</div>
+          
+          <p class="modal-desc" id="modalDesc">وصف المصباح</p>
+
+          <div class="modal-specs-list" id="modalSpecsList">
+            <!-- Populated via JS -->
+          </div>
+
+          <div class="modal-action-box">
+            <div class="modal-price-display">
+              <span class="m-price-label">السعر المقترح:</span>
+              <span class="m-price-val" id="modalPrice">متاح عند الطلب</span>
+            </div>
+
+            <a href="https://wa.me/201034380360" target="_blank" class="btn-modal-wa" id="modalWaBtn">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>طلب هذا التصميم فوراً عبر واتساب</span>
+            </a>
+          </div>
+
+          <div class="modal-note">
+            <i class="fa-solid fa-shield-check"></i>
+            <span>واتساب المبيعات المباشر: 01034380360 • توصيل لجميع المحافظات.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>

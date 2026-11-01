@@ -1,0 +1,13 @@
+# Vercel local project metadata
+.vercel/
+
+# Local development files
+.env
+.env.*
+!.env.example
+
+# OS and editor metadata
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
