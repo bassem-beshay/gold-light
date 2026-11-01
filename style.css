@@ -1780,8 +1780,8 @@ body {
 .footer-bottom {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
   gap: 1.5rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-subtle);
@@ -2088,39 +2088,144 @@ body {
   color: var(--text-subtle);
 }
 
-/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+/* ========================================================
+   COMPREHENSIVE RESPONSIVE ENGINE (LAPTOP, TABLET & MOBILE)
+   Pixel-Perfect Tuning for All Viewports from 320px to 4K
+   ======================================================== */
+
+/* Prevent any accidental horizontal overflow */
+html, body, .main-site-wrapper {
+  max-width: 100vw;
+  overflow-x: clip;
+}
+
+/* 1. LARGE LAPTOPS & DESKTOPS (1200px - 1440px) */
+@media (max-width: 1366px) {
+  .container {
+    max-width: 1200px;
+    padding: 0 1.5rem;
+  }
+
+  .hero-container {
+    gap: 2.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .pro-products-grid {
+    gap: 1.5rem;
+  }
+}
+
+/* 2. STANDARD LAPTOPS & IPAD PRO (1025px - 1200px) */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-description {
+    font-size: 1.05rem;
+  }
+
+  .hero-stats {
+    gap: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.6rem;
+  }
+
+  .footer-top {
+    gap: 2rem;
+  }
+}
+
+/* 3. COMPACT LAPTOPS & TABLETS (769px - 1024px) */
 @media (max-width: 1024px) {
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 3rem;
   }
 
   .hero-content {
     align-items: center;
+    max-width: 680px;
+    margin: 0 auto;
   }
 
-  .hero-ctas, .hero-stats {
+  .hero-ctas {
     justify-content: center;
+  }
+
+  .hero-stats {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-stage {
+    justify-content: center;
+  }
+
+  .hero-bulb-stage {
+    max-width: 380px;
+    height: 400px;
   }
 
   .pro-products-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .footer-top {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
   }
 
-  .modal-3d-body {
-    grid-template-columns: 1fr;
+  .footer-brand {
+    grid-column: span 2;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-about {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .footer-links-col, .footer-contact-col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-links {
+    align-items: center;
+  }
+
+  .footer-wa-link {
+    justify-content: center;
   }
 }
 
+/* 4. TABLETS & LARGE PHONES (481px - 768px) */
 @media (max-width: 768px) {
+  /* Header */
+  .site-header {
+    height: 72px;
+  }
+
+  .header-container {
+    height: 72px;
+    padding: 0 1.25rem;
+  }
+
   .main-nav {
     display: none;
   }
@@ -2129,36 +2234,361 @@ body {
     display: flex;
   }
 
+  /* Penthouse Story Hook in Portrait Mode */
+  .story-sticky-stage {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .penthouse-viewport {
+    height: 100vh;
+    height: 100dvh;
+  }
+
+  .zone-kitchen {
+    clip-path: ellipse(52% 52% at 26% 45%);
+    -webkit-mask-image: radial-gradient(ellipse 55% 55% at 26% 45%, #000 35%, transparent 80%);
+    mask-image: radial-gradient(ellipse 55% 55% at 26% 45%, #000 35%, transparent 80%);
+  }
+
+  .zone-tv {
+    clip-path: ellipse(45% 52% at 52% 45%);
+    -webkit-mask-image: radial-gradient(ellipse 48% 54% at 52% 45%, #000 35%, transparent 80%);
+    mask-image: radial-gradient(ellipse 48% 54% at 52% 45%, #000 35%, transparent 80%);
+  }
+
+  .zone-salon {
+    clip-path: ellipse(56% 62% at 76% 45%);
+    -webkit-mask-image: radial-gradient(ellipse 60% 64% at 76% 45%, #000 35%, transparent 80%);
+    mask-image: radial-gradient(ellipse 60% 64% at 76% 45%, #000 35%, transparent 80%);
+  }
+
+  .cinema-minimal-dots {
+    right: 1rem;
+    gap: 0.8rem;
+  }
+
+  .m-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .story-scroll-hint {
+    bottom: 1.5rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .scroll-hint-label {
+    font-size: 0.78rem;
+  }
+
+  .story-explore-wrap {
+    bottom: 2rem;
+    width: 100%;
+    padding: 0 1.5rem;
+  }
+
+  .story-explore-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+    padding: 0.85rem 1.8rem;
+    font-size: 0.95rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 4rem 0 3rem;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.25;
+  }
+
+  .hero-description {
+    font-size: 0.98rem;
+    line-height: 1.7;
+  }
+
+  .hero-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+  }
+
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .stat-number {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.72rem;
+    text-align: center;
+  }
+
+  .hero-bulb-stage {
+    max-width: 320px;
+    height: 340px;
+  }
+
+  /* Product Cards Grid */
   .pro-products-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1.5rem;
+  }
+
+  .pro-card-img-wrap {
+    height: 240px;
+  }
+
+  /* Features Grid */
+  .features-grid {
     grid-template-columns: 1fr;
     max-width: 440px;
     margin: 0 auto;
+    gap: 1.25rem;
   }
 
-  .features-grid {
-    grid-template-columns: 1fr;
+  .feature-card {
+    text-align: center;
+    align-items: center;
+    padding: 1.75rem 1.25rem;
   }
 
-  .studio-bulbs-row {
-    grid-template-columns: repeat(2, 1fr);
+  /* CTA Banner */
+  .cta-box {
+    padding: 3rem 1.5rem;
+    border-radius: var(--radius-lg);
   }
 
-  .story-orbit-ring {
-    width: 360px;
-    height: 360px;
+  .cta-title {
+    font-size: 1.75rem;
   }
 
-  .story-progress-indicator {
-    right: 1rem;
+  .cta-desc {
+    font-size: 0.95rem;
   }
 
+  /* Footer */
   .footer-top {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-brand {
+    grid-column: span 1;
+  }
+
+  .footer-links-col, .footer-contact-col {
+    align-items: center;
+  }
+
+  .footer-col-title::after {
+    left: 50%;
+    transform: translateX(-50%);
+    right: auto;
+  }
+
+  /* Floating WhatsApp */
+  .floating-wa-wrap {
+    bottom: 1.25rem;
+    left: 1.25rem;
   }
 
   .floating-wa-tooltip {
     display: none;
+  }
+}
+
+/* 5. SMALL SMARTPHONES (320px - 480px) */
+@media (max-width: 480px) {
+  /* Compact Header */
+  .site-header {
+    height: 65px;
+  }
+
+  .header-container {
+    height: 65px;
+    padding: 0 0.85rem;
+  }
+
+  .brand-logo-img {
+    height: 38px;
+    max-width: 45px;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  .brand-sub {
+    display: none; /* Hide subline on tiny phone screens to prevent any wrapping */
+  }
+
+  .btn-header-wa {
+    font-size: 0.8rem !important;
+    gap: 0.35rem !important;
+  }
+
+  .btn-header-wa i {
+    font-size: 1rem !important;
+  }
+
+  /* Story Hook on Small Phones */
+  .cinema-minimal-dots {
+    right: 0.6rem;
+    gap: 0.65rem;
+  }
+
+  .m-dot {
+    width: 5px;
+    height: 5px;
+  }
+
+  .scroll-hint-label {
+    font-size: 0.72rem;
+  }
+
+  .story-explore-btn {
+    font-size: 0.88rem;
+    padding: 0.8rem 1.4rem;
+  }
+
+  /* Hero Section */
+  .hero-section {
+    padding: 2.8rem 0 2rem;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.85rem;
+  }
+
+  .hero-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-description {
+    font-size: 0.92rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.85rem;
+  }
+
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    gap: 0.5rem;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .hero-bulb-stage {
+    max-width: 270px;
+    height: 290px;
+  }
+
+  /* Product Cards on Small Phones */
+  .pro-products-grid {
+    max-width: 100%;
+    padding: 0 0.5rem;
+  }
+
+  .pro-card {
+    border-radius: 14px;
+  }
+
+  .pro-card-img-wrap {
+    height: 210px;
+    padding: 1rem;
+  }
+
+  .pro-card-content {
+    padding: 1.15rem;
+  }
+
+  .pro-card-title {
+    font-size: 1.1rem;
+  }
+
+  .pro-card-desc {
+    font-size: 0.82rem;
+  }
+
+  .spec-chip {
+    font-size: 0.72rem;
+    padding: 0.2rem 0.55rem;
+  }
+
+  .pro-card-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .btn-wa-compact {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Section Headers */
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .section-desc {
+    font-size: 0.9rem;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    padding: 2.2rem 1rem;
+  }
+
+  .cta-title {
+    font-size: 1.5rem;
+  }
+
+  .cta-desc {
+    font-size: 0.88rem;
+  }
+
+  /* Footer */
+  .footer-about {
+    font-size: 0.85rem;
+  }
+
+  .copyright {
+    font-size: 0.78rem;
+    line-height: 1.6;
   }
 }
 
